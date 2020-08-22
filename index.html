@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+
+        * {
+            cursor: url("img/cursor_normal.png"), auto;
+        }
+
+        body {
+            font-size: 16px;
+            font-family: 'cwTeXYen', sans-serif;
+            background-image: linear-gradient(to top, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%);
+            /* background-image: linear-gradient(to top, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%); */
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        #mainbody {
+            width: 100%;
+            /* height: 100vh; */
+            display: flex;
+            flex-direction: column;
+            padding: 10rem;
+            align-items: center;
+        }
+
+        #logo {
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            /* background-color: black; */
+            margin-top: -5rem;
+        }
+
+        #logo img{
+            width: 500px;
+            margin-bottom: 1rem;
+        }
+
+        #logo h5 {
+            color: white;
+            /* background-color: #13959D; */
+            background-color: #ba99d8;
+            padding: .5rem;
+            text-align: center;
+            border-radius: .5rem;
+        }
+
+        #contain {
+            display: flex;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+            justify-content: center;
+
+        }
+
+        #contain>div {
+            /* background-color: teal; */
+            margin: .5rem;
+            text-align: center;
+            /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
+        }
+
+        #contain>div>div {
+            overflow: hidden;
+            width: 200px;
+            height: 200px;
+        }
+
+        #contain>div>div>img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+
+
+        #contain>div>div>img:hover {
+            transition-duration: .3s;
+            transition-timing-function: cubic-bezier(.17, .67, .47, 1.43);
+            transform: scale(1.1);
+            filter: brightness(1.15);
+            cursor: url("img/cursor_point.png"), auto;
+        }
+
+        a,
+        a:hover {
+            text-decoration-line: none;
+            color: black;
+        }
+
+        a h5:hover {
+            text-decoration-line: none;
+            color: #18acb4;
+            cursor: url("img/cursor_point.png"), auto;
+            /* font-weight: bold; */
+        }
+
+        a h5 {
+            margin-top: .5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        #footer {
+            /* background-color: #ba99d8; */
+            width: 100%;
+            height: 4rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mainbody">
+        <div id="logo">
+            <img src="./img/LOGO_03.png" alt="">
+            <!-- <h5>陳逸姍個人作品集</h5> -->
+        </div>
+        <div id="contain">
+
+            <div>
+                <div> <img src="./img/w_joinnn.JPG" alt=""> </div>
+                <a href="">
+                    <h5>- Joinnn -</h5>
+                </a>
+
+            </div>
+            <div>
+                <div> <img src="./img/w_index.JPG" alt=""> </div>
+                <a href="https://www.youtube.com/watch?v=QEiyb9H5eQA&feature=youtu.be" target="_blank">
+                    <h5>- Allison個人網頁 -</h5>
+                </a>
+            </div>
+            <div>
+                <div> <img src="./img/w_powerpuff.JPG" alt=""> </div>
+                <a href="https://allison1107.github.io/PowerpuffGirls/" target="_blank">
+                    <h5>- 拯救小鎮村 -</h5>
+                </a>
+            </div>
+            <div>
+                <div> <img src="./img/w_caculator.JPG" alt=""> </div>
+                <a href="https://allison1107.github.io/Caculator/" target="_blank">
+                    <h5>- 計算機 -</h5>
+                </a>
+            </div>
+            <div>
+                <div> <img src="./img/w_calendar.JPG" alt=""> </div>
+                <a href="https://allison1107.github.io/Calendar/" target="_blank">
+                    <h5>- 月曆 -</h5>
+                </a>
+            </div>
+            <div>
+                <div> <img src="./img/w_logo.JPG" alt=""> </div>
+                <a href="https://allison1107.github.io/AllisonChenLogo/" target="_blank">
+                    <h5>- Logo Animation -</h5>
+                </a>
+            </div>
+            <div>
+                <div> <img src="./img/w_youtube.JPG" alt=""> </div>
+                <a href="https://allison1107.github.io/CssPraticeYoutube/" target="_blank">
+                    <h5>- 網站復刻：Youtube -</h5>
+                </a>
+            </div>
+            <div>
+                <div> <img src="./img/w_ask.JPG" alt=""> </div>
+                <a href="https://allison1107.github.io/NostalgiaGame/" target="_blank">
+                    <h5>- 懷舊小遊戲問卷 -</h5>
+                </a>
+            </div>
+            <!-- <div>
+                <div> <img src="./img/w_cat.JPG" alt=""> </div>
+                <a href="https://allison1107.github.io/CatEarFM/" target="_blank">
+                    <h5>- 網站復刻：貓耳FM -</h5>
+                </a>
+            </div> -->
+            <div>
+                <div> <img src="./img/w_yuyu.JPG" alt=""></div>
+                <a href="https://allison1107.github.io/Yuyu/" target="_blank">
+                    <h5>- 網站復刻：幽遊白書 -</h5>
+                </a>
+            </div>
+            <div>
+                <div> <img src="./img/w_elder.JPG" alt=""></div>
+                <a href="https://allison1107.github.io/ElderDiagram/" target="_blank">
+                    <h5>- 長輩圖產生器 -</h5>
+                </a>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div id="footer">
+    </div>
+
+
+</body>
+
+</html>
