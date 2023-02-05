@@ -1,207 +1,238 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html lang="en-US">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <style>
-        @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
-
-        * {
-            cursor: url("img/cursor_normal.png"), auto;
-        }
-
-        body {
-            font-size: 16px;
-            font-family: 'cwTeXYen', sans-serif;
-            background-image: linear-gradient(to top, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%);
-            /* background-image: linear-gradient(to top, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%); */
-            background-size: cover;
-            background-attachment: fixed;
-        }
-
-        #mainbody {
-            width: 100%;
-            /* height: 100vh; */
-            display: flex;
-            flex-direction: column;
-            padding: 10rem;
-            align-items: center;
-        }
-
-        #logo {
-            width: 500px;
-            display: flex;
-            flex-direction: column;
-            /* background-color: black; */
-            margin-top: -5rem;
-        }
-
-        #logo img{
-            width: 500px;
-            margin-bottom: 1rem;
-        }
-
-        #logo h5 {
-            color: white;
-            /* background-color: #13959D; */
-            background-color: #ba99d8;
-            padding: .5rem;
-            text-align: center;
-            border-radius: .5rem;
-        }
-
-        #contain {
-            display: flex;
-            margin-top: 3rem;
-            flex-wrap: wrap;
-            justify-content: center;
-
-        }
-
-        #contain>div {
-            /* background-color: teal; */
-            margin: .5rem;
-            text-align: center;
-            /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
-        }
-
-        #contain>div>div {
-            overflow: hidden;
-            width: 200px;
-            height: 200px;
-        }
-
-        #contain>div>div>img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-
-        }
-
-
-        /* #contain>div>div>img:hover {
-            transition-duration: .3s;
-            transition-timing-function: cubic-bezier(.17, .67, .47, 1.43);
-            transform: scale(1.1);
-            filter: brightness(1.15);
-            cursor: url("img/cursor_point.png"), auto;
-        } */
-
-        a,
-        a:hover {
-            text-decoration-line: none;
-            color: black;
-        }
-
-        a h5:hover {
-            text-decoration-line: none;
-            color: #18acb4;
-            cursor: url("img/cursor_point.png"), auto;
-            /* font-weight: bold; */
-        }
-
-        a h5 {
-            margin-top: .5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        #footer {
-            /* background-color: #ba99d8; */
-            width: 100%;
-            height: 4rem;
-        }
-    </style>
+    <title>Allison Chen's Portfolio </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Template by CocoBasic" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, PHP" />
+    <meta name="author" content="CocoBasic" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href='https://fonts.googleapis.com/css?family=Poppins:400,700,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href='css/style.css' />
+    <link rel="stylesheet" type="text/css" href='css/myStyle.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 
 <body>
-    <div id="mainbody">
-        <div id="logo">
-            <img src="./img/LOGO_03.png" alt="">
-            <!-- <h5>陳逸姍個人作品集</h5> -->
-        </div>
-        <div id="contain">
+    <!-- Preloader Gif -->
+    <div class="doc-loader">
+        <img src="images/loading.gif" alt="Loading">
+    </div>
 
-            <div>
-                <div> <img src="./img/w_joinnn.JPG" alt=""> </div>
-                <a href="https://youtu.be/QLAzXG4tBl8" target="_blank">
-                    <h5>- Joinnn -</h5>
-                </a>
+    <div id="content" class="site-content">
 
-            </div>
-            <div>
-                <div> <img src="./img/w_index.JPG" alt=""> </div>
-                <a href="https://www.youtube.com/watch?v=QEiyb9H5eQA&feature=youtu.be" target="_blank">
-                    <h5>- Allison個人網頁 -</h5>
-                </a>
-            </div>
-            <div>
-                <div> <img src="./img/w_powerpuff.JPG" alt=""> </div>
-                <a href="https://allison1107.github.io/PowerpuffGirls/" target="_blank">
-                    <h5>- 拯救小鎮村 -</h5>
-                </a>
-            </div>
-            <div>
-                <div> <img src="./img/w_caculator.JPG" alt=""> </div>
-                <a href="https://allison1107.github.io/Caculator/" target="_blank">
-                    <h5>- 計算機 -</h5>
-                </a>
-            </div>
-            <div>
-                <div> <img src="./img/w_calendar.JPG" alt=""> </div>
-                <a href="https://allison1107.github.io/Calendar/" target="_blank">
-                    <h5>- 月曆 -</h5>
-                </a>
-            </div>
-            <div>
-                <div> <img src="./img/w_logo.JPG" alt=""> </div>
-                <a href="https://allison1107.github.io/AllisonChenLogo/" target="_blank">
-                    <h5>- Logo Animation -</h5>
-                </a>
-            </div>
-            <div>
-                <div> <img src="./img/w_youtube.JPG" alt=""> </div>
-                <a href="https://allison1107.github.io/CssPraticeYoutube/" target="_blank">
-                    <h5>- 網站復刻：Youtube -</h5>
-                </a>
-            </div>
-            <div>
-                <div> <img src="./img/w_ask.JPG" alt=""> </div>
-                <a href="https://allison1107.github.io/NostalgiaGame/" target="_blank">
-                    <h5>- 懷舊小遊戲問卷 -</h5>
-                </a>
-            </div>
-            <!-- <div>
-                <div> <img src="./img/w_cat.JPG" alt=""> </div>
-                <a href="https://allison1107.github.io/CatEarFM/" target="_blank">
-                    <h5>- 網站復刻：貓耳FM -</h5>
-                </a>
-            </div> -->
-            <div>
-                <div> <img src="./img/w_yuyu.JPG" alt=""></div>
-                <a href="https://allison1107.github.io/Yuyu/" target="_blank">
-                    <h5>- 網站復刻：幽遊白書 -</h5>
-                </a>
-            </div>
-            <div>
-                <div> <img src="./img/w_elder.JPG" alt=""></div>
-                <a href="https://allison1107.github.io/ElderDiagram/" target="_blank">
-                    <h5>- 長輩圖產生器 -</h5>
-                </a>
+        <div class="content-left">
+            <div class="content-left-wrapper">
+                <header>
+                    <div class="toggle-holder">
+                        <div id="toggle">
+                            <div class="menu-line"></div>
+                        </div>
+                    </div>
+
+                    <div class="top-pagination">
+                        <div class="current-num">
+                            <span>01</span>
+                        </div>
+                        <div class="pagination-div"></div>
+                        <div class="total-pages-num"></div>
+                    </div>
+
+                    <div class="menu-holder">
+                        <div class="menu-wrapper relative">
+                            <nav id="header-main-menu">
+                                <ul class="main-menu sm sm-clean">
+                                    <li><a href="#home">Home</a></li>
+                                    <li><a href="#about">About & Skills</a></li>
+                                    <li><a href="#resume">Experience</a></li>
+                                    <li><a href="#portfolio">Portfolio</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="big-num">
+                        <div class="current-big-num">01</div>
+                        <div class="icon-scroll"></div>
+                    </div>
+                </header>
             </div>
 
         </div>
 
+        <div class="content-right">
+            <div class="content-right-wrapper">
+                <div id="home" class="section full-width-section">
+                    <div class="section-wrapper">
+                        <div class="home-section">
+                            <div class="back-drop"></div>
+                            <div class="home-img">
+                                <img src="./images/main_image_01.jpg" alt="">
+                                <div class="home-btn-wrap">
+                                    <a href="https://github.com/allison1107" target="_blank"><i class="fa-brands fa-github"></i>Git</a>
+                                    <a href="https://linkedin.com/in/allison1107" target="_blank"><i class="fa-brands fa-linkedin"></i>Linkedin</a>                                </div>
+                            </div>
+                            <h1 class="home-title">Hello<br> I’m Allison<br> Chen</h1>
 
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Service Section -->
+                <div id="about" class="section">
+                    <div class="section-wrapper block">
+                        <div class="content-1300">
+                            <div class="row">
+                                <div class="one-half width-40 last">
+                                    <h2 class="entry-title section-title">About</h2>
+                                    <div class="info-wrap">
+                                        <div class="my-info">
+                                            <p class="my-info-title"><i class="fa-solid fa-user"></i>NAME</p>
+                                            <p class="my-info-content">Allison Chen ( 陳逸姍)</p>
+                                        </div>
+
+                                        <div class="my-info">
+                                            <p class="my-info-title"><i class="fas fa-birthday-cake"></i></i>BIRTH</p>
+                                            <p class="my-info-content">1991 / 11 / 07</p>
+                                        </div>
+
+                                        <div class="my-info">
+                                            <p class="my-info-title"><i class="fa-solid fa-briefcase"></i>ROLE</p>
+                                            <p class="my-info-content">Front-End Developer</p>
+                                        </div>
+
+                                        <div class="my-info">
+                                            <p class="my-info-title"><i class="fa-solid fa-envelope"></i>EMAIL</p>
+                                            <p class="my-info-content">c12344624@gmail.com</p>
+                                        </div>
+
+                                        <div class="my-info">
+                                            <p class="my-info-title"><i class="fa-solid fa-phone"></i>PHONE</p>
+                                            <p class="my-info-content">0952-023499</p>
+                                        </div>
+
+                                        <div class="my-info">
+                                            <p class="my-info-title"><i class="fa-solid fa-graduation-cap"></i>EDUATION
+                                            </p>
+                                            <p class="my-info-content">國立台灣藝術大學<br>多媒體動畫藝術學系動畫藝術碩士</p>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="button-group-wrapper">
+                                        <a 
+                                            href="./images/resume/Allison_Resume.jpg" 
+                                            download="Allison_Resume.jpg" 
+                                            class="button btn-green"
+                                        >
+                                            Download My Resume
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="one-half width-55">
+                                    <h2 class="entry-title section-title">Skills</h2>
+                                    <div class="services-wrapper">
+                                        <div class="service-holder">
+                                            <i class="fas fa-laptop-code"></i>
+                                            <h4 class="service-title">Front End</h4>
+                                            <div class="service-text">
+                                                Vue.js / HTML / Css / Scss / JavaScript / JQuery / TypeScript /
+                                                Flutter
+                                            </div>
+                                        </div>
+
+                                        <div class="service-holder m-right-0">
+                                            <i class="fas fa-code"></i>
+                                            <h4 class="service-title">Back End</h4>
+                                            <div class="service-text">
+                                                Node.js / Nest.js / PHP
+                                            </div>
+                                        </div>
+
+                                        <div class="service-holder m-bottom-0">
+                                            <i class="fas fa-database"></i>
+                                            <h4 class="service-title">Other</h4>
+                                            <div class="service-text">
+                                                mySQL / PostgreSQL
+                                            </div>
+                                        </div>
+
+                                        <div class="service-holder m-right-0 m-bottom-0">
+                                            <i class="fas fa-palette"></i>
+                                            <h4 class="service-title">Design</h4>
+                                            <div class="service-text">
+                                                Maya / Photoshop / Illustrator / Aftereffects / Premiere / XD / Indesign
+                                                / ZBrush
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resume Section -->
+                <div id="resume" class="section">
+                    <div class="section-wrapper block">
+                        <div class="content-1300">
+                            <div class="row">
+                                <h2 class="entry-title section-title">Experience <span>Work Experience</h3>
+                                </h2>
+                                <ul class="timeline-holder" id="work-exp-wrap">
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <h2 class="entry-title section-title">Experience <span>Web / App Project</h3>
+                                </h2>
+                                <ul class="timeline-holder" id="web-project-wrap">
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <h2 class="entry-title section-title">Experience <span>Design Project</h3>
+                                </h2>
+                                <ul class="timeline-holder" id="design-project-wrap">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Portfolio Section -->
+                <div id="portfolio" class="section">
+                    <div class="section-wrapper block">
+                        <h2 class="entry-title section-title portfolio-title">Portfolio</h2>
+                        <div class="content-1300">
+                            <div id="portfolio-wrapper" class="relative">
+                                <div class="filter-warp button-group filters-button-group">
+                                    <div class="button is-checked" data-filter=".Web">WEB & H5</div>
+                                    <div class="button" data-filter=".Design">DESIGN</div>
+                                </div>
+                                <div class="portfolio-load-content-holder"></div>
+                                <div class="grid" id="portfolio-grid">
+                                    <div class="grid-sizer"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div id="footer">
-    </div>
-
-
+    <!--Load JavaScript-->
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src='js/imagesloaded.pkgd.js'></script>
+    <script src='js/jquery.prettyPhoto.js'></script>
+    <script src='js/isotope.pkgd.js'></script>
+    <script src='js/jquery.smartmenus.min.js'></script>
+    <script src='js/owl.carousel.min.js'></script>
+    <script src='js/circle-progress.min.js'></script>
+    <script src='js/main.js'></script>
+    <script src='js/data/experenceData.js'></script>
+    <script src='js/data/portfolioData.js'></script>
 </body>
 
 </html>
