@@ -82,7 +82,6 @@
 
     function setPortfolio() {
         var grid = $('.grid').imagesLoaded(function () {
-            console.log(123);
             grid.isotope({
                 percentPosition: true,
                 itemSelector: '.grid-item',
@@ -296,6 +295,7 @@
             var portfolioItemID = $(this).data('id');
             if(!`${portfolioItemID}`) return;
             $(this).closest('.grid-item').addClass('portfolio-content-loading');
+            $('#portfolio-wrapper .filters-button-group').css('display','none');
             $('#portfolio-grid').addClass('portfoio-items-mask');
             if ($("#pcw-" + portfolioItemID).length) {
                 $('html, body').animate({scrollTop: $('#portfolio-wrapper').offset().top - 150}, 400);
@@ -341,13 +341,16 @@
                             var portfolioReturnItemID = $(this).closest('.portfolio-content-wrapper').attr("id").split("-")[1];
                             $('.portfolio-load-content-holder').addClass("viceversa");
                             $('#portfolio-grid, .category-filter').css('display', 'block');
+                            $('#portfolio-wrapper .filters-button-group').css('display','flex');
                             setTimeout(function () {
                                 $('#pcw-' + portfolioReturnItemID).removeClass('show');
                                 $('.portfolio-load-content-holder').removeClass('viceversa show');
                                 $('#portfolio-grid, .category-filter, .category-filter-list').removeClass('hide');
                             }, 300);
                             setTimeout(function () {
-                                $('html, body').animate({scrollTop: $('#p-item-' + portfolioReturnItemID).offset().top - 150}, 400);
+                                if(`${portfolioReturnItemID}`){
+                                    $('html, body').animate({scrollTop: $('#p-item-' + portfolioReturnItemID).offset().top - 150}, 400);
+                                }
                             }, 500);
                         });
                     });
