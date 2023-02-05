@@ -1,4 +1,4 @@
 # allison1107.github.io
 
-建議用1440*900觀看
+2023更新個人履歷網站
 https://allison1107.github.io/
