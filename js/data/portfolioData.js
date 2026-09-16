@@ -1,4 +1,4 @@
-let portfolioList = {
+const portfolioList = {
   Web: [
     // {
     //     title: '直播平台 - 客端',
@@ -164,48 +164,30 @@ let portfolioList = {
     },
   ],
 };
-let sortPortfolioList = [];
+// 攤平成單一陣列，index 即為作品 id
+const sortPortfolioList = Object.entries(portfolioList).flatMap(([type, items]) =>
+  items.map((item) => ({ ...item, type }))
+);
 
-for (key in portfolioList) {
-  let result = portfolioList[key].map((item) => {
-    return {
-      ...item,
-      type: key,
-    };
-  });
-  sortPortfolioList = [...sortPortfolioList, ...result];
-}
-
-sortPortfolioList.forEach((value, index) => {
-  if (value.openType === 'page') {
-    $('#portfolio-grid').append(
-      `<div class="grid-item element-item p-one-third ${value.type}">
-              <a class="item-link ajax-portfolio" href="portfolioTemplate/portfolio-1.html" data-id="${index}">
-                <img src="${value.img}" alt="" />
-                <div class="portfolio-text-holder">
-                  <div class="portfolio-text-wrapper">
-                    <p class="portfolio-text">${value.title}</p>
-                    <p class="portfolio-cat">${value.skill}</p>
-                  </div>
-                </div>
-              </a>
-            </div>`
-    );
-  }
-  // 外開網頁
-  if (value.openType === 'url') {
-    $('#portfolio-grid').append(
-      `<div class="grid-item element-item p-one-third ${value.type}">
-              <a class="item-link" href="${value.url}" target="_blank">
-                <img src="${value.img}" alt="" />
-                <div class="portfolio-text-holder">
-                  <div class="portfolio-text-wrapper">
-                    <p class="portfolio-text">${value.title}</p>
-                    <p class="portfolio-cat">${value.skill}</p>
-                  </div>
-                </div>
-              </a>
-            </div>`
-    );
-  }
-});
+$('#portfolio-grid').append(
+  sortPortfolioList
+    .map((item, index) => {
+      // page: 站內開啟詳細內容；url: 外開網頁
+      const linkAttrs =
+        item.openType === 'page'
+          ? `class="item-link ajax-portfolio" href="portfolioTemplate/portfolio-1.html" data-id="${index}"`
+          : `class="item-link" href="${item.url}" target="_blank" rel="noopener"`;
+      return `<div id="p-item-${index}" class="grid-item element-item p-one-third ${item.type}">
+        <a ${linkAttrs}>
+          <img src="${item.img}" alt="${item.title}" loading="lazy" />
+          <div class="portfolio-text-holder">
+            <div class="portfolio-text-wrapper">
+              <p class="portfolio-text">${item.title}</p>
+              <p class="portfolio-cat">${item.skill}</p>
+            </div>
+          </div>
+        </a>
+      </div>`;
+    })
+    .join('')
+);
